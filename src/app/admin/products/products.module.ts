@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { ItemsRoutingModule } from './items-routing.module';
+import { ProductsRoutingModule } from './products-routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        ItemsRoutingModule
+        ProductsRoutingModule
     ],
     /*
     declarations: [
@@ -17,4 +17,4 @@ import { ItemsRoutingModule } from './items-routing.module';
         OverviewComponent
     ]*/
 })
-export class ItemsModule { }
+export class ProductsModule { }
