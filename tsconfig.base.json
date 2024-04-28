@@ -18,7 +18,8 @@
     ],
     "paths": {
       "@app/*": ["src/app/*"],
-      "@environments/*": ["src/environments/*"]
+      "@environments/*": ["src/environments/*"],
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
     }
   }
 }

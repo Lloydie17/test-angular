@@ -12,7 +12,8 @@ export class UpdateComponent implements OnInit {
     form: FormGroup;
     loading = false;
     submitted = false;
-    deleting = false;
+    //deleting = false;
+    deactivating = false;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -64,13 +65,13 @@ export class UpdateComponent implements OnInit {
             });
     }
 
-    onDelete() {
+    onDeactivate() {
         if (confirm('Are you sure?')) {
-            this.deleting = true;
-            this.accountService.delete(this.account.id)
+            this.deactivating = true;
+            this.accountService.deactivate(this.account.id)
                 .pipe(first())
                 .subscribe(() => {
-                    this.alertService.success('Account deleted successfully', { keepAfterRouteChange: true });
+                    this.alertService.success('Account deactivated successfully', { keepAfterRouteChange: true });
                 });
         }
     }
