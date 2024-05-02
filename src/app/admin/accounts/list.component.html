@@ -19,10 +19,6 @@
             <td>{{ account.isActive ? 'Active' : 'Inactive' }}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{account.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
-                <button (click)="deactivateAccount(account.id)" class="btn btn-sm btn-danger btn-delete-account" [disabled]="account.role === 'Admin' && account.isActive">
-                    <span *ngIf="account.isDeactivating" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!account.isDeactivating">Deactivate</span>
-                </button>
             </td>
         </tr>
         <tr *ngIf="!accounts">

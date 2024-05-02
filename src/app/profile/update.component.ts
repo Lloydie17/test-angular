@@ -64,15 +64,4 @@ export class UpdateComponent implements OnInit {
                 }
             });
     }
-
-    onDeactivate() {
-        if (confirm('Are you sure?')) {
-            this.deactivating = true;
-            this.accountService.deactivate(this.account.id)
-                .pipe(first())
-                .subscribe(() => {
-                    this.alertService.success('Account deactivated successfully', { keepAfterRouteChange: true });
-                });
-        }
-    }
 }

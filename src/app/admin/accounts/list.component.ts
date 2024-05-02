@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
             .subscribe(accounts => this.accounts = accounts);
     }
 
-
+    /*
     deactivateAccount(id: string) {
         const account = this.accounts.find(x => x.id === id);
         account.isDeactivating = true;
@@ -28,7 +28,7 @@ export class ListComponent implements OnInit {
             });
     }
 
-    /*
+    
     deleteAccount(id: string) {
         const account = this.accounts.find(x => x.id === id);
         account.isDeleting = true;
